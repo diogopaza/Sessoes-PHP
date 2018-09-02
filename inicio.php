@@ -8,9 +8,11 @@
 	$password= $_POST['password'];
 
 	//conectar ao banco de dados
-	$con = mysqli_connect('localhost','root','','server') or die('Sem conexão com o servidor');
+	$con = new mysqli('localhost','root','','server') or die('Sem conexão com o servidor');
 
-	echo'conectado';
+	$sql = 'SELECT * FROM users';
+	$query = $con->query($sql);
+	echo 'Registros encontrados: '. $query->num_rows;
 
 
 
