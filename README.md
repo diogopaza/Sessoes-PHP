@@ -15,9 +15,6 @@
 irá para inicio.php
 
 
-<?php
-	
-	echo"
 		<form method='post' action='inicio.php' id='formLogin' name='formLogin'>
 			<fieldset id='field'>
 				<legend>Login</legend>
@@ -30,8 +27,8 @@ irá para inicio.php
 
 
 		</form>
-	";
+	
 
 
-?>
+
 
