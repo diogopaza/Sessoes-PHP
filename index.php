@@ -7,7 +7,7 @@
 					<label>Nome:</label>
 					<input type='text' name='login' id='login'><br />
 					<label>Senha:</label>
-					<input type='password' name='senha' id='senha'><br>
+					<input type='password' name='password' id='senha'><br>
 					<input type='submit' value='Logar'>
 			</fieldset>
 
