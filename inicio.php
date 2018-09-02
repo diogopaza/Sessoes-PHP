@@ -10,14 +10,16 @@
 	//conectar ao banco de dados
 	$con = new PDO("mysql:host=localhost;dbname=server;charset=utf8","root","");
 
-	$sql = "SELECT * FROM users WHERE user_id= 1";
-	echo $sql;
+	$sql = "SELECT * FROM users WHERE user='" . $login . "' AND password='". $password .  "'";
+	
 	$query = $con->query($sql);
 
-	
-	
-	foreach ($query as $row) {
-		echo $row['user'];
+	if($query->rowCount() > 0 ){
+
+		$SESSION['login'] = $login;
+		$SESSION['password'] = $password;
+
+		header('location:site.php');
 	}
 
 
