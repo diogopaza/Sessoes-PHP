@@ -16,10 +16,13 @@
 
 	if($query->rowCount() > 0 ){
 
-		$SESSION['login'] = $login;
-		$SESSION['password'] = $password;
+		$_SESSION['login'] = $login;
+		$_SESSION['password'] = $password;
 
 		header('location:site.php');
+	}else{
+
+		header('location:index.php');
 	}
 
 
