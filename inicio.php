@@ -22,7 +22,7 @@
 		header('location:site.php');
 	}else{
 
-		header('location:index.php');
+		header('location:index.php', true, 302);
 	}
 
 
