@@ -8,11 +8,16 @@
 	$password= $_POST['password'];
 
 	//conectar ao banco de dados
-	$con = new mysqli('localhost','root','','server') or die('Sem conexão com o servidor');
+	$con = new PDO("mysql:host=localhost;dbname=server;charset=utf8","root","");
 
-	$sql = 'SELECT * FROM users';
+	$sql = "SELECT * FROM users";
 	$query = $con->query($sql);
-	echo 'Registros encontrados: '. $query->num_rows;
+	foreach ($query as $row) {
+		echo $row['user'];
+	}
+
+
+	echo 'Registros encontrados: '. $query->rowCount();
 
 
 
